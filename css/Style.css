@@ -1,0 +1,1009 @@
+@import url('../css/fonts.css');
+
+html, body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light : #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #6096ad 100%);
+
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin : 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic : 'Livvic', cursive;
+}
+
+
+/* ---------------- Global Classes ---------------*/
+
+a{
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style-type: none;
+}
+
+h1{
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+
+span{
+    font-family: var(--Abel);
+}
+
+
+.text-gray{
+    color: var(--text-gray);
+}
+
+p{
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+/* ------x------- Global Classes -------x-------*/
+
+/* --------------- navbar ----------------- */
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    /* for normal size */
+    height: 5rem;
+    /* for small size */
+    /* min-height: 10vh; */
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+.logo{
+    display: block;
+    width: 150px;
+    height: 95px;
+
+}
+.name{
+    position: relative;
+    top: 15px;
+    right: 200px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.nav .ayush{    
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse{
+    height: 32rem;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+    font-family: var(--Abel);
+    font-size: 1.1rem;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: var(--midnight);
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: var(--white);
+    
+}
+.nav .nav-brand{
+    position: relative;
+}
+
+
+.nav .social{
+    padding: 1.4rem 0
+}
+
+.nav .social i{
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover{
+    color: #a1c4cf;
+}
+
+/* -------x------- navbar ---------x------- */
+.container{
+    margin-top: 50px;
+}
+.container .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+.about{
+    width: 250px;
+}
+.catalogue{
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.4);
+      margin-right: 60px;
+      margin-left: 40px;
+      margin-bottom: 40px;
+}
+.background{
+    background-image: url("../assets/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    margin-top: 10px;
+}
+.asset {
+    display: flex;
+    position: relative;
+    right: 200px;
+    top: 200px;
+    justify-content: flex-end;
+    opacity: 1;  
+
+}
+.asset .logos{
+    display: inline-block;
+    border-radius: 70px;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.heading{
+    border: 5px solid white;
+    display: inline-block;
+    position: relative;
+    top: 270px;
+    float: right;
+    letter-spacing: 3px;
+    text-align: end;
+    color: white;
+}
+label{
+    font-size: 25px;
+}
+
+.form-back{
+    background-image: url("../assets/formBACK.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -50px;
+    height: 98vh;
+    background-position: center;
+    text-align: center;
+    opacity: 1;
+    
+}
+form {
+    margin-top: 100px;
+}
+.contact{
+    position: relative;
+    top: 100px;
+    
+    font-family: var(--Livvic);
+    letter-spacing: 8px;
+}
+
+.contacts{
+    font-family: var(--Abel);
+    letter-spacing: 4px;
+    font-size: 50px;
+}
+
+
+/*              Viewport less then or equal to 750px            */
+
+@media only screen and (max-width: 840px){
+    .nav .ayush, .nav .nav-items{
+        flex-direction: column;
+        
+    }
+    .nav .nav-items{
+        margin-top: 0rem;
+        
+    }
+    .name{
+        display: none;
+    }
+
+    .nav .toggle-collapse{
+        display: block;
+    }
+    .background{
+        height: 140vh;
+    }
+    .heading{
+        position: relative;
+        top: 500px;
+        text-align: center;
+    }
+    .asset{
+        max-width: 200px;
+        z-index: 1;
+        position: relative;
+        left: -50px;   
+    }
+    .asset .logos{
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
+    input[type=submit]{
+      position: relative;
+      left: 165px !important;
+    } 
+    .form-back{
+        height: 98vh;
+    }
+
+}
+footer{
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 20px;
+    font-family: var(--Livvic);
+  }
+  
+  input[type=submit] {
+    background-color: rgb(10, 150, 63);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    left: 380px;
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .rows:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    h5{
+        font-size: 14px;
+    }
+    .col-25, .col-75{
+        
+        margin-left: 20px;
+      width: 90%;
+      margin-top: 0;
+    }
+    input[type="submit"]{
+        position: relative;
+        margin-top: 19px;
+        left: 175px!important;
+    }
+    .form-back{
+        height: 139vh !important;
+        
+    }
+    .catalogue{
+        margin-bottom: 45px;
+        box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+    }
+  }
+  @media only screen and (min-width:630px) and (max-width: 830px){
+    input[type="submit"]{
+        position: relative;
+        left: 198px !important;
+    }
+    h5{
+        font-size: 14px;
+    }
+    .form-back{
+        height: 96vh;
+    }
+    .catalogue{
+        margin-bottom: 40px !important;
+    }
+    .btn{
+        position: relative;
+        left: 50px;
+    }
+  }
+/*        x      Viewport less then or equal to 750px       x     */
+@media only screen and (min-width:840px) and (max-width: 849px){
+    .name{
+        display: none;
+        right: 15px;
+    }
+    
+    .asset {
+            display: flex;
+            position: relative;
+            left: -741px;
+            top: 159px;
+            justify-content: flex-end;
+            opacity: 1;
+
+     }
+     .asset .logos{
+       width: 85px;
+       height: 85px;
+     }
+
+    
+}
+
+/*              Viewport less then or equal to 520px            */
+
+@media only screen and (max-width: 520px){
+    h5{
+        font-size: 18px;
+    }
+    nav .toggle-collapse{
+        width: 80% !important;
+    }
+    .background{
+        height: 160vh;
+    }
+    .asset{
+        z-index: 1;
+        position: relative;
+        top: 220px;
+        left: -60px;
+    }
+    .asset .logos{
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
+    .form-back{
+        background-image: url("../assets/formBACK.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: -80px;
+        text-align: center;
+        
+    }
+
+
+    input[type=submit] {
+        position: relative;
+        left: 50px!important;
+    }
+    .heading{
+        letter-spacing: -1px;
+    }
+
+
+}
+
+/*        x      Viewport less then or equal to 520px       x     */
+@media only screen and (min-width:850px) and (max-width: 1120px){
+    .name{
+        position: relative;
+        display: none;
+    }
+    .background{
+        height: 140vh;
+    }
+    .asset{
+        z-index: 1;
+        position: relative;
+        top: 200px;
+        left: -750px;
+    }
+    .asset .logos{
+        width: 75px;
+        height: 75px;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+    .heading{
+        position: relative;
+        top: 520px;
+    }
+    .form-back{
+        height: 99vh;
+    }
+    .catalogue{
+        margin-bottom: 35px;
+    }
+
+}
+@media only screen and (min-width:1121px) and (max-width: 1300px){
+    .background{
+        height: 105vh;
+    }
+    .heading{
+        position: relative;
+        top: 330px;
+    }
+    .asset{
+        z-index: 1;
+        position: relative;
+        left: -1150px;
+    }
+    .asset .logos{
+        width: 85px;
+        height: 85px;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1;
+        position: relative;
+        left: 7px;
+    }
+    .name{
+        display: none;
+    }  
+    .form-back{
+        height: 98vh;
+    }
+    input[type=submit] {
+        position: relative;
+        left: 311px;
+    }
+}
+@media only screen and (min-width:950px) and (max-width: 1240px){
+    .asset{
+        z-index: 1;
+        position: relative;
+        left: -820px;
+    }
+}
+/* <------------------about-----------------------> */
+.about-heading{
+    line-height:1.375em;
+    text-align:center;
+    font-size:32px;
+    color:white;
+}
+.content{
+    width: 60%;
+    margin: 0px auto;
+    float: none; 
+    text-align: justify;
+    font-size: 22px;
+    
+}
+.content p{
+    color:white;
+}
+.about-section{
+    background-image: url("../assets/about-bg.jpg");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 105vh;
+    margin-top: -30px;
+}
+@media screen and (max-width: 767px) {
+    .content {
+      width: 80%;
+      font-size: 18px;
+    }
+    .about-section{
+        height:inherit;
+        min-height: 350px;
+    }
+  }
+
+  /* /<------------------contact-form------------------------>/ */
+#status {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+  }
+.success {
+    display: block;
+    width: 200%;
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+  }
+.error {
+      display: block;
+      width: 100%;
+    background-color: rgb(212, 55, 8);
+    color: black;
+    animation: status 4s ease forwards;
+  }
+
+/* <----------------------Products---------------> */
+.productHeading{
+    display: block;
+    padding: 50px 200px;
+    width: 100%;
+    background-color:whitesmoke;
+    color: #3f4954;
+    text-align: center;
+    margin-bottom: 70px;
+}
+#nap{
+    
+    display: flex;
+    position: relative;
+    top: 100px;
+    height: 250px;
+}
+#naps{
+    position: relative;
+    top: 100px;
+}
+#napt{
+    position: relative;
+    top: 30px;
+    height: 435px;
+}
+.catalogu{
+    
+    text-align: center;
+    padding: 15px;
+   box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+    margin-right: 70px;
+    margin-left: 40px;
+    margin-bottom: 70px;
+}
+.abou{
+    width: 250px;
+}
+#product2{
+    width: 217px;
+    position: relative;
+    top: 20px;
+}
+#product6{
+    position: relative;
+    top: 50px;
+
+}
+.abouts{
+    width: 280px;
+    height: 350px;
+}
+@media only screen and (max-width: 520px){
+    .productHeading{
+        display: block;
+        padding: 18px 9px;
+        max-width: 100%;
+        background-color:whitesmoke;
+        color: #3f4954;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    #nap{
+    
+        display: flex;
+        position: relative;
+        top: -8px;
+        height: 300px;
+    }
+    #naps{
+        position: relative;
+        top: 2px;
+    }
+    #napt{
+        position: relative;
+        top: 4px;
+        left: 10px;
+        width: 232px;
+        height: 435px;
+    }
+    .catalogu{
+        
+        text-align: center;
+        padding: 15px;
+       box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+        margin-right: 38px;
+        margin-left: 53px;
+        margin-bottom: 70px;
+    }
+    .abou{
+        width: 250px;
+    }
+    #product2{
+        width: 232px;
+        position: relative;
+        top: -2px;
+    }
+    #product6{
+        position: relative;
+        top: 0px;
+    
+    }
+    .abouts{
+        width: 256px;
+        height: 340px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .productHeading{
+        display: block;
+        padding: 18px 9px;
+        max-width: 100%;
+        background-color:whitesmoke;
+        color: #3f4954;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    #nap{
+    
+        display: flex;
+        position: relative;
+        top: -8px;
+        height: 300px;
+    }
+    #naps{
+        position: relative;
+        top: 2px;
+    }
+    #napt{
+        position: relative;
+        top: 4px;
+        left: 10px;
+        width: 232px;
+        height: 435px;
+    }
+    .catalogu{
+        
+        text-align: center;
+        padding: 15px;
+       box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+        margin-right: 38px;
+        margin-left: 53px;
+        margin-bottom: 70px;
+    }
+    .abou{
+        width: 250px;
+    }
+    #product2{
+        width: 232px;
+        position: relative;
+        top: -2px;
+    }
+    #product6{
+        position: relative;
+        top: 0px;
+    
+    }
+    .abouts{
+        width: 256px;
+        height: 340px;
+    }
+  }
+  @media only screen and (min-width:950px) and (max-width: 1240px){
+#napt{
+    position: relative;
+    top:10px;
+}
+}
+
+
+/* /----------------------------Contact US---------------------------/ */
+.details h5{
+    margin-bottom: 0px;
+}
+.details p{
+    margin-bottom: 0px;
+    color: black;
+}
+/* /<----------contact-us form---------------->/ */
+.form-back-contactpage{
+    background-image: url("../assets/cleaning-equipment-with-copy-space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -50px;
+    height: 90vh;
+    background-position: center;
+    text-align: center;
+    opacity: 1;
+}
+@media only screen and (max-width: 520px){
+    .form-back-contactpage{
+           background-image: url("../assets/cleaning-equipment-with-copy-space.jpg");
+           background-repeat: no-repeat;
+           background-size: cover;
+           margin-top: -80px;
+           text-align: center;
+           
+       }
+    }   
+/* /-------------------map------------------------/ */
+.map-responsive{
+    /* overflow:hidden;
+    padding-bottom:56.25%; */
+    position:relative;
+    height:450px;
+    clear: both;
+
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+
+}
+@media only screen and (max-width:450px){
+    .form-back-contactpage{
+        height: 117vh;
+    }
+}
+@media only screen and (min-width:451px) and (max-width:800px){
+    .form-back-contactpage{
+        height: 117vh;
+    }
+}
+/* <----------------------Media---------------> */
+.mediaHeading{
+    display: block;
+    padding: 50px 200px;
+    width: 100%;
+    background-color:whitesmoke;
+    color: #3f4954;
+    text-align: center;
+    margin-bottom: 70px;
+}
+#nap1{
+    
+    display: flex;
+    position: relative;
+    top: 100px;
+    height: 250px;
+}
+#naps1{
+    position: relative;
+    top: 100px;
+}
+#napt1{
+    position: relative;
+    top: 1px;
+    height: 435px;
+}
+.catalogu1{
+    
+    text-align: center;
+    padding: 15px;
+   box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+    margin-right: 70px;
+    margin-left: 40px;
+    margin-bottom: 70px;
+}
+.abou1{
+    width: 250px;
+}
+#product2_1{
+    width: 217px;
+    position: relative;
+    top: 20px;
+}
+#product6_1{
+    position: relative;
+    top: 50px;
+
+}
+.abouts_1{
+    width: 280px;
+    height: 350px;
+}
+@media only screen and (max-width: 520px){
+    .mediaHeading{
+        display: block;
+        padding: 18px 9px;
+        max-width: 100%;
+        background-color:whitesmoke;
+        color: #3f4954;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    #nap1{
+    
+        display: flex;
+        position: relative;
+        top: -8px;
+        height: 300px;
+    }
+    #naps1{
+        position: relative;
+        top: 2px;
+    }
+    #napt1{
+        position: relative;
+        top: 4px;
+        left: 10px;
+        width: 232px;
+        height: 435px;
+    }
+    .catalogu1{
+        
+        text-align: center;
+        padding: 15px;
+       box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+        margin-right: 38px;
+        margin-left: 53px;
+        margin-bottom: 70px;
+    }
+    .abou1{
+        width: 250px;
+    }
+    #product2_1{
+        width: 232px;
+        position: relative;
+        top: -2px;
+    }
+    #product6_1{
+        position: relative;
+        top: 0px;
+    
+    }
+    .abouts1{
+        width: 256px;
+        height: 340px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .mediaHeading{
+        display: block;
+        padding: 18px 9px;
+        max-width: 100%;
+        background-color:whitesmoke;
+        color: #3f4954;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    #nap1{
+    
+        display: flex;
+        position: relative;
+        top: -8px;
+        height: 300px;
+    }
+    #naps1{
+        position: relative;
+        top: 2px;
+    }
+    #napt1{
+        position: relative;
+        top: 4px;
+        left: 10px;
+        width: 232px;
+        height: 435px;
+    }
+    .catalogu1{
+        
+        text-align: center;
+        padding: 15px;
+       box-shadow: 0px 4px 8px 0px rgb(0,0,0,0.6);
+        margin-right: 38px;
+        margin-left: 53px;
+        margin-bottom: 70px;
+    }
+    .abou1{
+        width: 250px;
+    }
+    #product2_1{
+        width: 232px;
+        position: relative;
+        top: -2px;
+    }
+    #product6_1{
+        position: relative;
+        top: 0px;
+    
+    }
+    .abouts1{
+        width: 256px;
+        height: 340px;
+    }
+  }
+  @media only screen and (min-width:950px) and (max-width: 1240px){
+#napt1{
+    position: relative;
+    top:10px;
+}
+}
